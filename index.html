@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key</title>
+</head>
+<body>
+  <p id="randomString"></p>
+
+  <script>
+    function generateRandomString(length) {
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var result = '';
+      var charactersLength = characters.length;
+      for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return result;
+    }
+
+    var randomString = generateRandomString(10); // Change the length as needed
+    document.getElementById('randomString').innerText = randomString;
+  </script>
+</body>
+</html>
